@@ -7,10 +7,10 @@ bl_info = {
     "blender": (2, 80, 0),
     'location': 'File > Export > glTF 2.0',
     'description': 'Exports speaker properties and Blender object types as glTF extras.',
-    'tracker_url': "https://github.com/KhronosGroup/glTF-Blender-IO/issues/",  # Replace with your issue tracker
+    'tracker_url': "https://github.com/stmaccarelli/io_glTF_speakers_types/issues/",
     'isDraft': False,
-    'developer': "stmaccarelli", # Replace this
-    'url': 'https://stefano-maccarelli.com',  # Replace this
+    'developer': "stmaccarelli",
+    'url': 'https://stefano-maccarelli.com',
 }
 
 
