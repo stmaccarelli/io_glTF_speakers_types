@@ -1,5 +1,5 @@
-#glTF extras: Speakers and Blender Object Types addon#
-
+glTF extras: Speakers and Blender Object Types addon
+===
 
 This addon  exports Speakers data and Blender Object types into extra fields of a glTF.
 extras are custom fields you can write into the glTF. They will mean nothing for a official, standard glTF importer.
@@ -7,26 +7,25 @@ To actually make use of those data, a parsing function must be coded in the impo
 
 THOSE ARE NOT NATIVE glTF FUNCTIONALITIES, NOR THIS ADDON WILL ADD ANY FUNCTIONALITY TO glTF FILE FORMAT
 
+
+Blender Scene
 ---
+Load the audio file and set the Speaker as you'd mnormally do in Blender.
+the audio file will not be embedded in the glTF.
 
-##Blender Scene
+<img width="1271" alt="Blender Scene with Speaker" src="https://user-images.githubusercontent.com/1394193/160485946-94067599-5eef-449d-83bc-a4d70d9028dc.png">
 
-the audio file will not be embedded in the glTF, and must be placed in the same folder of the glTF file.
-.. figure:: https://code.blender.org/wp-content/uploads/2018/12/springrg.jpg
-   :scale: 50 %
-   :align: center
 
+The Exporter
 ---
+The addon is enabled by default, in the glTF Export window you can setup it.
 
-##The Exporter
+<img width="1227" alt="Screenshot 2022-03-28 at 22 45 16" src="https://user-images.githubusercontent.com/1394193/160486260-5aa42bac-8f5c-4f4a-a9a7-81581a8399fa.png">
 
+
+three.js sample parse code for Speakers
 ---
-
-##three.js sample parse code for Speakers
-
-_the audio file will not be embedded in the glTF, and must be placed in the webserver. This sample code assumes it's in the same folder of the glTF file._
-
-
+_NOTE: the audio file will not be embedded in the glTF, and must be placed in the webserver. This sample code assumes it's in the same folder of the glTF file._
 ```javascript
 new GLTFLoader().load( "./glTF-file.glb", function ( gltf ) {
 
@@ -72,13 +71,13 @@ new GLTFLoader().load( "./glTF-file.glb", function ( gltf ) {
 });
 
 ```
+
+
+Working Example
 ---
+Using three.js Positional Audio helper to show the speaker position and cone.
 
-##Final result
-
-
-
-
+https://user-images.githubusercontent.com/1394193/160486554-f5ea958f-1305-4f52-8f9c-12d28f37097f.mp4
 
 
 
