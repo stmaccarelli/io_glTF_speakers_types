@@ -1,31 +1,38 @@
 glTF extras: Speakers and Blender Object Types addon
 ===
 
-This addon  exports Speakers data and Blender Object types into extra fields of a glTF.
+This addon exports Speakers data and Blender Object types into extra fields of a glTF.
 extras are custom fields you can write into the glTF. They will mean nothing for a official, standard glTF importer.
 To actually make use of those data, a parsing function must be coded in the importer, I'll provide a sample method for [three.js](https://github.com/mrdoob/three.js), that's the environment this addon was built for.
 
 THOSE ARE NOT NATIVE glTF FUNCTIONALITIES, NOR THIS ADDON WILL ADD ANY FUNCTIONALITY TO glTF FILE FORMAT
 
+This addon can also export Blender objects types names as extra fields in the glTF file. This may be useful to distinguish between placeholder objects, or whatever use you may think of.
+
+
+Installation
+---
+Install this addon from Blender Preferences > Addons > Install... > Select the file, load it > activate the addon by checking it.
 
 Blender Scene
 ---
-Load the audio file and set the Speaker as you'd mnormally do in Blender.
-the audio file will not be embedded in the glTF.
+Load the audio file and set the Speaker as you'd normally do in Blender.
+The audio file will not be embedded in the glTF.
 
-<img width="1271" alt="Blender Scene with Speaker" src="https://user-images.githubusercontent.com/1394193/160485946-94067599-5eef-449d-83bc-a4d70d9028dc.png">
+<img width="1264" alt="Blender scene" src="https://user-images.githubusercontent.com/1394193/160487465-dcefc757-3cdf-4e08-8c3a-74b1adfb0843.png">
 
 
 The Exporter
 ---
-The addon is enabled by default, in the glTF Export window you can setup it.
+The addon is enabled by default, and in the glTF Export window you can disable it.
 
-<img width="1227" alt="Screenshot 2022-03-28 at 22 45 16" src="https://user-images.githubusercontent.com/1394193/160486260-5aa42bac-8f5c-4f4a-a9a7-81581a8399fa.png">
+<img width="1227" alt="Blender glTF Exporter + addons" src="https://user-images.githubusercontent.com/1394193/160486260-5aa42bac-8f5c-4f4a-a9a7-81581a8399fa.png">
 
 
 three.js sample parse code for Speakers
 ---
 _NOTE: the audio file will not be embedded in the glTF, and must be placed in the webserver. This sample code assumes it's in the same folder of the glTF file._
+
 ```javascript
 new GLTFLoader().load( "./glTF-file.glb", function ( gltf ) {
 
@@ -80,10 +87,9 @@ Using three.js Positional Audio helper to show the speaker position and cone.
 https://user-images.githubusercontent.com/1394193/160486554-f5ea958f-1305-4f52-8f9c-12d28f37097f.mp4
 
 
+License
+---
 
-##License
--------
-
-As Blender, this addon is licensed under the GNU General Public License, Version 3.
+As a Blender addon, this addon is licensed under the GNU General Public License, Version 3.
 
 See [blender.org/about/license](https://www.blender.org/about/license) for details.
